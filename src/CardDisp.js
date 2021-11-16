@@ -19,9 +19,9 @@ export function CardDisp({
   statusreport,
   id,
 }) {
-  const style1 = { color: option == "FREE" ? "lightgrey" : "black" };
+  const style1 = { color: option === "FREE" ? "lightgrey" : "black" };
   const style2 = {
-    color: option == "FREE" || option == "PLUS" ? "lightgrey" : "black",
+    color: option === "FREE" || option === "PLUS" ? "lightgrey" : "black",
   };
   return (
     <Card id="card" sx={{ maxWidth: 300 }}>
@@ -51,19 +51,19 @@ export function CardDisp({
             {access}
           </Typography>
           <Typography className="typo" style={style1}>
-            {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
+            {option === "FREE" ? <ClearIcon /> : <CheckIcon />}
             {privateprojects}
           </Typography>
           <Typography className="typo" style={style1}>
-            {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
+            {option === "FREE" ? <ClearIcon /> : <CheckIcon />}
             {support}
           </Typography>
           <Typography className="typo" style={style1}>
-            {option == "FREE" ? <ClearIcon /> : <CheckIcon />}
+            {option === "FREE" ? <ClearIcon /> : <CheckIcon />}
             {subdomain}
           </Typography>
           <Typography className="typo" style={style2}>
-            {option == "FREE" || option == "PLUS" ? (
+            {option === "FREE" || option === "PLUS" ? (
               <ClearIcon />
             ) : (
               <CheckIcon />
